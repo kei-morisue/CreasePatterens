@@ -1,11 +1,12 @@
-const suf = 'https://kei-morisue.github.io/CreasePatterens/'
+// const path = 'https://kei-morisue.github.io/CreasePatterens/'
+const path = ''
 
-const pics = await async_list(suf + "./pics_list.txt")
-const pics_list = pics.map((e) => { return "pics\\" + e })
-const png = await async_list(suf + "./png_list.txt")
-const png_list = png.map((e) => { return "PNG_format\\" + e })
-const cp = await async_list(suf + "./cp_list.txt")
-const cp_list = png.map((e) => { return "CP_format\\" + e })
+const pics = await async_list(path + "pics_list.txt")
+const pics_list = pics.map((e) => { return path + "pics\\" + e })
+const png = await async_list(path + "png_list.txt")
+const png_list = png.map((e) => { return path + "PNG_format\\" + e })
+const cp = await async_list(path + "cp_list.txt")
+const cp_list = png.map((e) => { return path + "CP_format\\" + e })
 
 var dates = new Set()
 var years = new Set()
