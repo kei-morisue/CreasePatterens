@@ -1,10 +1,10 @@
+const suf = 'https://kei-morisue.github.io/CreasePatterens/'
 
-
-const pics = await async_list("./pics_list.txt")
+const pics = await async_list(suf + "./pics_list.txt")
 const pics_list = pics.map((e) => { return "pics\\" + e })
-const png = await async_list("./png_list.txt")
+const png = await async_list(suf + "./png_list.txt")
 const png_list = png.map((e) => { return "PNG_format\\" + e })
-const cp = await async_list("./cp_list.txt")
+const cp = await async_list(suf + "./cp_list.txt")
 const cp_list = png.map((e) => { return "CP_format\\" + e })
 
 var dates = new Set()
@@ -69,7 +69,7 @@ async function async_list(list_name) {
         responce => responce.text()
     ).then(
         d => {
-            const names = d.split("\r\n")
+            const names = d.replaceAll("\r", "").split("\n")
             names.pop()
             return names
         }
