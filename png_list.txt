@@ -275,6 +275,7 @@
 2023-08-03_kettle_kun_cp.png
 2023-08-24_nyan_cp.png
 2024-04-04_rabbit_hole_cp.png
+2024-04-18_novi_carpet.png
 2024-05-21_koch_cp.png
 2024-05-31_koch_cp.png
 2024-06-09_quarter_carpet_cp.png

@@ -59,7 +59,7 @@
 2018-10-26_cp_kitsune.jpg
 2018-10-26_cp_tanuki.jpg
 2018-10-27_cp_columbus_cube.jpg
-2018-11-02_naef.jpg
+2018-11-02_naef1.jpg
 2018-11-03_cp_waterdrop.jpg
 2018-11-10_cp_fibonacci_vortex.jpg
 2018-11-23_cp_general_grievous.jpg
@@ -258,9 +258,9 @@
 2023-08-03_kettle_kun.jpg
 2023-08-24_nyan.jpg
 2024-04-04_rabbit_hole.jpg
+2024-04-18_novi_carpet.png
 2024-05-21_koch.png
 2024-05-31_koch.png
-2024-06-09_novi_carpet.png
 2024-06-09_quarter_carpet.jpg
 2024-06-19_koch.jpg
 2024-07-10_yae_fox.jpg
