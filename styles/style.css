@@ -3,3 +3,28 @@ img {
     max-width: 30%;
     max-height: 30%;
 }
+
+.linkbox {
+    position: relative;
+    height: 20px;
+    width: 100%;
+}
+
+
+.linkbox a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.linkbox {
+    border: solid 2px #000000;
+}
+
+.linkbox a:hover {
+    opacity: 0.1;
+    background-color: #000000;
+    color: blueviolet;
+}

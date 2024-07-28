@@ -6,7 +6,7 @@ const pics_list = pics.map((e) => { return path + "pics\\" + e })
 const png = await async_list(path + "png_list.txt")
 const png_list = png.map((e) => { return path + "PNG_format\\" + e })
 const cp = await async_list(path + "cp_list.txt")
-const cp_list = png.map((e) => { return path + "CP_format\\" + e })
+const cp_list = cp.map((e) => { return path + "CP_format\\" + e })
 
 var dates = new Set()
 var years = new Set()
@@ -22,24 +22,28 @@ cp_list.map((e) => {
 years = Array.from(years).sort()
 
 
+if (cp_list.length != png_list.length) { debugger }
 
 const file_area = document.getElementById('file_area');
-for (let j = 0; j < png_list.length; j++) {
+for (let j = 0; j < 10; j++) {
     const work_area = document.createElement('div')
     const title_area = document.createElement('div')
     file_area.appendChild(work_area)
     work_area.appendChild(title_area)
     const res = await async_img(png_list[j])
+    const cp_res = await async_cp(cp_list[j])
 
     work_area.id = get_key(res)
     work_area.year = res.year
-    title_area.innerHTML = res.title + "&nbsp;&nbsp;&nbsp;&nbsp;@" + res.date
-    title_area.style.fontWeight = 'bold'
+    title_area.className = "linkbox"
+
+    cp_res.a.innerHTML = res.title + "    @" + res.date
+    title_area.appendChild(cp_res.a)
 
     work_area.appendChild(res.img)
     work_area.style.display = "none"
 }
-for (let j = 0; j < pics_list.length; j++) {
+for (let j = 0; j < 10; j++) {
     const res = await async_img(pics_list[j])
 
     const work_area = document.getElementById(get_key(res))
@@ -99,10 +103,23 @@ async function async_img(file_path) {
             const title_no_under = title.replaceAll("_cp.", "").replaceAll("_cp_", "_").replaceAll('_', ' ').replaceAll(".", "").toUpperCase().replaceAll("MORISUE KEI", "")
             const img_element = document.createElement('img');
             img_element.src = URL.createObjectURL(data);
-            return { img: img_element, date: date, title: title_no_under, year: date.substring(0, 4) }
+            return { img: img_element, path: file_path, date: date, title: title_no_under, year: date.substring(0, 4) }
         })
 }
-
+async function async_cp(file_path) {
+    return await fetch(file_path)
+        .then(response => response.blob())
+        .then(data => {
+            const idx_path = file_path.indexOf("\\")
+            const idx_ext = file_path.indexOf(".")
+            const date = file_path.substr(idx_path + 1, 10)
+            const title = file_path.substring(idx_path + 11, idx_ext + 1)
+            const title_no_under = title.replaceAll("_cp.", "").replaceAll("_cp_", "_").replaceAll('_', ' ').replaceAll(".", "").toUpperCase().replaceAll("MORISUE KEI", "")
+            const a_element = document.createElement('a');
+            a_element.href = file_path;
+            return { a: a_element, date: date, title: title_no_under, year: date.substring(0, 4) }
+        })
+}
 function get_key(res) {
     return res.date + res.title.substr(0, Math.min(4, res.title.length))
 }
