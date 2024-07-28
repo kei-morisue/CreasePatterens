@@ -281,3 +281,4 @@
 2024-06-09_quarter_carpet_cp.png
 2024-06-19_koch_cp.png
 2024-07-10_yae_fox_cp.png
+2024-07-28_tie_fighter_cp.png
