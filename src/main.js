@@ -25,7 +25,7 @@ years = Array.from(years).sort()
 if (cp_list.length != png_list.length) { debugger }
 
 const file_area = document.getElementById('file_area');
-for (let j = 0; j < 10; j++) {
+for (let j = 0; j < png_list.length; j++) {
     const work_area = document.createElement('div')
     const title_area = document.createElement('div')
     file_area.appendChild(work_area)
@@ -43,7 +43,7 @@ for (let j = 0; j < 10; j++) {
     work_area.appendChild(res.img)
     work_area.style.display = "none"
 }
-for (let j = 0; j < 10; j++) {
+for (let j = 0; j < pics_list.length; j++) {
     const res = await async_img(pics_list[j])
 
     const work_area = document.getElementById(get_key(res))
