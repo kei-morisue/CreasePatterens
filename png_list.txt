@@ -9,6 +9,7 @@
 2009-11-13_cp_moon_cp.png
 2009-12-11_umbrella2_cp.png
 2010-02-11_origamisan1_cp.png
+2010-02-12_toilet_paper_cp.png
 2010-02-19_gagambomodoki3_cp.png
 2010-02-28_owata1_cp.png
 2010-02-28_redpyramidthing1_cp.png
@@ -40,6 +41,7 @@
 2012-05-19_copyright1_cp.png
 2012-07-25_Sierpinski Gasket Level 4 (Easy) Morisue kei_cp.png
 2012-07-25_Sierpinski Gasket Level 5 (Easy) Morisue kei_cp.png
+2012-12-27_snowman_cp.png
 2013-02-01_Nowloading_cp.png
 2013-02-27_beltedkingfisher2_cp.png
 2013-02-27_snowman2_cp.png
@@ -53,6 +55,7 @@
 2013-11-03_asahi2_cp.png
 2013-12-23_railroad1_cp.png
 2013-12-28_cp_fuji_and_sun_cp.png
+2014-01-13_16_falgs_cp.png
 2014-02-20_crestedkingfisher2_cp.png
 2014-03-29_submarine2_cp.png
 2014-04-17_nanodesu_body_1_cp.png
