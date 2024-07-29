@@ -1,4 +1,6 @@
+2005-06-24_hermit_crab_cp.png
 2006-00-00_Rain_frog_Morisue_kei_cp.png
+2009-06-09_dark_prince_cp.png
 2009-07-16_clonehand1_cp.png
 2009-07-18_clone2_cp.png
 2009-07-31_blaster1_cp.png
@@ -11,7 +13,7 @@
 2010-02-28_owata1_cp.png
 2010-02-28_redpyramidthing1_cp.png
 2010-04-29_steamcar1_cp.png
-2010-06-12_clone3_cp.png
+2010-06-12_cyborg_ninja_cp.png
 2010-07-11_usagizukin1_cp.png
 2010-07-27_The White Hare Of Inaba + scales - Morisue Kei_cp.png
 2010-07-27_whitehare1_cp.png
@@ -56,7 +58,7 @@
 2014-04-17_nanodesu_body_1_cp.png
 2014-04-17_nanodesu_head_1_cp.png
 2014-04-17_nanodesu_legs_1_cp.png
-2014-04-20_ship1_cp.png
+2014-04-19_boat_and_waves_cp.png
 2014-05-01_nanodesu_equipments_2_cp.png
 2014-09-19_attat1_cp.png
 2014-10-26_Imperial_Star Destroyer_cp.png
