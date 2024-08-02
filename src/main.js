@@ -11,6 +11,12 @@ const cp_list = cp.map((e) => { return path + "CP_format\\" + e })
 var dates = new Set()
 var years = new Set()
 
+var png_map = await async_img_map(png_list)
+var cp_map = await async_cp_map(cp_list)
+var pics_map = await async_img_map(pics_list)
+
+
+
 cp_list.map((e) => {
     const idx_path = e.indexOf("\\")
     const yyyymmdd = e.substring(idx_path + 1, idx_path + 11)
@@ -30,8 +36,8 @@ for (let j = 0; j < png_list.length; j++) {
     const title_area = document.createElement('div')
     file_area.appendChild(work_area)
     work_area.appendChild(title_area)
-    const res = await async_img(png_list[j])
-    const cp_res = await async_cp(cp_list[j])
+    const res = await png_map.get(png_list[j])
+    const cp_res = await cp_map.get(cp_list[j])
 
     work_area.id = get_key(res)
     work_area.year = res.year
@@ -44,7 +50,7 @@ for (let j = 0; j < png_list.length; j++) {
     work_area.style.display = "none"
 }
 for (let j = 0; j < pics_list.length; j++) {
-    const res = await async_img(pics_list[j])
+    const res = await pics_map.get(pics_list[j])
 
     const work_area = document.getElementById(get_key(res))
     if (work_area == undefined || work_area == null) { debugger }
@@ -106,6 +112,23 @@ async function async_img(file_path) {
             return { img: img_element, path: file_path, date: date, title: title_no_under, year: date.substring(0, 4) }
         })
 }
+
+async function async_img_map(list) {
+    var img_map = new Map()
+    list.map((l) => {
+        const img = async_img(l)
+        img_map.set(l, img)
+    })
+    return img_map
+}
+async function async_cp_map(list) {
+    var img_map = new Map()
+    list.map((l) => {
+        const img = async_cp(l)
+        img_map.set(l, img)
+    })
+    return img_map
+}
 async function async_cp(file_path) {
     return await fetch(file_path)
         .then(response => response.blob())
@@ -117,7 +140,7 @@ async function async_cp(file_path) {
             const title_no_under = title.replaceAll("_cp.", "").replaceAll("_cp_", "_").replaceAll('_', ' ').replaceAll(".", "").toUpperCase().replaceAll("MORISUE KEI", "")
             const a_element = document.createElement('a');
             a_element.href = file_path;
-            return { a: a_element, date: date, title: title_no_under, year: date.substring(0, 4) }
+            return { a: a_element, date: date, title: title_no_under, year: date.substring(0, 4), path: file_path, }
         })
 }
 function get_key(res) {
