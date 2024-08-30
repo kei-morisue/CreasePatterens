@@ -287,3 +287,5 @@
 2024-06-19_koch.cp
 2024-07-10_yae_fox.cp
 2024-07-28_tie_fighter.cp
+2024-08-22_bangboo_euos.cp
+2024-08-27_star_rail.cp
