@@ -287,5 +287,7 @@
 2024-06-19_koch_cp.png
 2024-07-10_yae_fox_cp.png
 2024-07-28_tie_fighter_cp.png
-2024-08-22_bangboo_euos_cp.png
 2024-08-27_star_rail_cp.png
+2024-09-06_bocchi_the_book_cp.png
+2024-09-08_bangboo_euos_cp.png
+2024-09-08_psycho_axe_cp.png
