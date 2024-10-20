@@ -133,6 +133,7 @@
 2019-11-17_cp_propeller.cp
 2019-11-20_hirasawa.cp
 2019-11-25_marnie.cp
+2019-12-31_cp_mouse.cp
 2020-01-22_cp_oruyanke.cp
 2020-01-31_cp_fubuki.cp
 2020-02-06_bondrewd.cp
@@ -291,3 +292,7 @@
 2024-09-06_bocchi_the_book.cp
 2024-09-08_bangboo_euos.cp
 2024-09-08_psycho_axe.cp
+2024-10-05_cp_koch.cp
+2024-10-10_cp_cursed_cat.cp
+2024-10-15_cp_mad.cp
+2024-10-16_cp_sob.cp
