@@ -296,3 +296,6 @@
 2024-10-10_cp_cursed_cat.cp
 2024-10-15_cp_mad.cp
 2024-10-16_cp_sob.cp
+2024-10-28_pumpkinn.cp
+2024-10-29_cursed_cat.cp
+2024-10-29_cursed_cat2.cp
