@@ -300,4 +300,6 @@
 2024-10-29_cursed_cat.cp
 2024-10-29_cursed_cat2.cp
 2024-12-31_nabura_gozen.cp
+2025-01-05_cp_death.cp
+2025-01-07_oma.cp
 2025-01-xx_john.cp
