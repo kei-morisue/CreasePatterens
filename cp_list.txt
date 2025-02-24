@@ -304,3 +304,6 @@
 2025-01-07_oma.cp
 2025-01-16_john.cp
 2025-01-22_katana.cp
+2025-02-09_tokyo_tower.cp
+2025-02-10_compass.cp
+2025-02-23_stab.cp
