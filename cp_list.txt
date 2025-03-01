@@ -307,3 +307,5 @@
 2025-02-09_tokyo_tower.cp
 2025-02-10_compass.cp
 2025-02-23_stab.cp
+2025-02-26_father_hat.cp
+2025-02-27_synkei_ball.cp
