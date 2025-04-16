@@ -313,3 +313,6 @@
 2025-02-27_synkei_ball.cp
 2025-03-04_grem.cp
 2025-03-09_hatsune_miku.cp
+2025-03-11_tokyo.cp
+2025-04-02_horse.cp
+2025-04-15_pegasus.cp
