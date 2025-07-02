@@ -347,3 +347,8 @@
 2025-06-21_fox_mask_cp.png
 2025-06-24_chando_cp.png
 2025-06-27_duck_cp.png
+2025-06-28_railway_cp.png
+2025-06-30_black_cat_cp.png
+2025-07-02_sunflower_cp.png
+2025-07-02_sunflower_leaf_cp.png
+2025-07-02_watermelon_cp.png

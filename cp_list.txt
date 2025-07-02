@@ -347,3 +347,8 @@
 2025-06-21_fox_mask.cp
 2025-06-24_chando.cp
 2025-06-27_duck.cp
+2025-06-28_railway.cp
+2025-06-30_black_cat.cp
+2025-07-02_sunflower.cp
+2025-07-02_sunflower_leaf.cp
+2025-07-02_watermelon.cp
