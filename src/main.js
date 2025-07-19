@@ -1,5 +1,7 @@
 // const path = 'https://kei-morisue.github.io/CreasePatterens/'
-const path = ''
+const github = "https://raw.githubusercontent.com/kei-morisue/CreasePatterens/refs/heads/master/";
+const path = "";
+
 
 const pics = await async_list(path + "pics_list.txt")
 const pics_list = pics.map((e) => { return path + "pics\\" + e })
@@ -11,9 +13,9 @@ const cp_list = cp.map((e) => { return path + "CP_format\\" + e })
 var dates = new Set()
 var years = new Set()
 
-var png_map = await async_img_map(png_list)
-var cp_map = await async_cp_map(cp_list)
-var pics_map = await async_img_map(pics_list)
+var png_map = async_img_map(png_list)
+var cp_map = async_cp_map(cp_list)
+var pics_map = async_img_map(pics_list)
 
 
 
@@ -36,21 +38,21 @@ for (let j = 0; j < png_list.length; j++) {
     const title_area = document.createElement('div')
     file_area.appendChild(work_area)
     work_area.appendChild(title_area)
-    const res = await png_map.get(png_list[j])
-    const cp_res = await cp_map.get(cp_list[j])
+    const png_res = png_map.get(png_list[j])
+    const cp_res = cp_map.get(cp_list[j])
 
-    work_area.id = get_key(res)
-    work_area.year = res.year
+    work_area.id = get_key(png_res)
+    work_area.year = png_res.year
     title_area.className = "linkbox"
 
-    cp_res.a.innerHTML = res.title + "    @" + res.date
+    cp_res.a.innerHTML = png_res.title + "    @" + png_res.date
     title_area.appendChild(cp_res.a)
 
-    work_area.appendChild(res.img)
+    work_area.appendChild(png_res.img)
     work_area.style.display = "none"
 }
 for (let j = 0; j < pics_list.length; j++) {
-    const res = await pics_map.get(pics_list[j])
+    const res = pics_map.get(pics_list[j])
 
     const work_area = document.getElementById(get_key(res))
     if (work_area == undefined || work_area == null) { debugger }
@@ -98,22 +100,18 @@ async function async_list(list_name) {
     )
 }
 
-async function async_img(file_path) {
-    return await fetch(file_path)
-        .then(response => response.blob())
-        .then(data => {
-            const idx_path = file_path.indexOf("\\")
-            const idx_ext = file_path.indexOf(".")
-            const date = file_path.substr(idx_path + 1, 10)
-            const title = file_path.substring(idx_path + 11, idx_ext + 1)
-            const title_no_under = title.replaceAll("_cp.", "").replaceAll("_cp_", "_").replaceAll('_', ' ').replaceAll(".", "").toUpperCase().replaceAll("MORISUE KEI", "")
-            const img_element = document.createElement('img');
-            img_element.src = URL.createObjectURL(data);
-            return { img: img_element, path: file_path, date: date, title: title_no_under, year: date.substring(0, 4) }
-        })
+function async_img(file_path) {
+    const idx_path = file_path.indexOf("\\")
+    const idx_ext = file_path.indexOf(".")
+    const date = file_path.substr(idx_path + 1, 10)
+    const title = file_path.substring(idx_path + 11, idx_ext + 1)
+    const title_no_under = title.replaceAll("_cp.", "").replaceAll("_cp_", "_").replaceAll('_', ' ').replaceAll(".", "").toUpperCase().replaceAll("MORISUE KEI", "")
+    const img_element = document.createElement('img');
+    img_element.src = github + file_path;
+    return { img: img_element, path: file_path, date: date, title: title_no_under, year: date.substring(0, 4) }
 }
 
-async function async_img_map(list) {
+function async_img_map(list) {
     var img_map = new Map()
     list.map((l) => {
         const img = async_img(l)
@@ -121,7 +119,7 @@ async function async_img_map(list) {
     })
     return img_map
 }
-async function async_cp_map(list) {
+function async_cp_map(list) {
     var img_map = new Map()
     list.map((l) => {
         const img = async_cp(l)
@@ -129,19 +127,17 @@ async function async_cp_map(list) {
     })
     return img_map
 }
-async function async_cp(file_path) {
-    return await fetch(file_path)
-        .then(response => response.blob())
-        .then(data => {
-            const idx_path = file_path.indexOf("\\")
-            const idx_ext = file_path.indexOf(".")
-            const date = file_path.substr(idx_path + 1, 10)
-            const title = file_path.substring(idx_path + 11, idx_ext + 1)
-            const title_no_under = title.replaceAll("_cp.", "").replaceAll("_cp_", "_").replaceAll('_', ' ').replaceAll(".", "").toUpperCase().replaceAll("MORISUE KEI", "")
-            const a_element = document.createElement('a');
-            a_element.href = file_path;
-            return { a: a_element, date: date, title: title_no_under, year: date.substring(0, 4), path: file_path, }
-        })
+function async_cp(file_path) {
+
+    const idx_path = file_path.indexOf("\\")
+    const idx_ext = file_path.indexOf(".")
+    const date = file_path.substr(idx_path + 1, 10)
+    const title = file_path.substring(idx_path + 11, idx_ext + 1)
+    const title_no_under = title.replaceAll("_cp.", "").replaceAll("_cp_", "_").replaceAll('_', ' ').replaceAll(".", "").toUpperCase().replaceAll("MORISUE KEI", "")
+    const a_element = document.createElement('a');
+    a_element.href = github + file_path;
+    return { a: a_element, date: date, title: title_no_under, year: date.substring(0, 4), path: file_path, }
+
 }
 function get_key(res) {
     return res.date + res.title.substr(0, Math.min(4, res.title.length))
