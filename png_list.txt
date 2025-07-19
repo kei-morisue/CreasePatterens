@@ -352,3 +352,8 @@
 2025-07-02_sunflower_cp.png
 2025-07-02_sunflower_leaf_cp.png
 2025-07-02_watermelon_cp.png
+2025-07-03_poi_cp.png
+2025-07-08_kei_truck_cp.png
+2025-07-10_cursed_cat_cp.png
+2025-07-11_jeep_cp.png
+2025-07-15_neo_cp.png

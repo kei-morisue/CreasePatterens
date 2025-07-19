@@ -352,3 +352,8 @@
 2025-07-02_sunflower.cp
 2025-07-02_sunflower_leaf.cp
 2025-07-02_watermelon.cp
+2025-07-03_poi.cp
+2025-07-08_kei_truck.cp
+2025-07-10_cursed_cat.cp
+2025-07-11_jeep.cp
+2025-07-15_neo.cp
