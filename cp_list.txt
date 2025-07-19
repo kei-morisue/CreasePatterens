@@ -356,4 +356,6 @@
 2025-07-08_kei_truck.cp
 2025-07-10_cursed_cat.cp
 2025-07-11_jeep.cp
+2025-07-14_crab.cp
 2025-07-15_neo.cp
+2025-07-17_eyes.cp

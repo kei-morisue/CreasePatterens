@@ -356,4 +356,6 @@
 2025-07-08_kei_truck_cp.png
 2025-07-10_cursed_cat_cp.png
 2025-07-11_jeep_cp.png
+2025-07-14_crab_cp.png
 2025-07-15_neo_cp.png
+2025-07-17_eyes_cp.png
