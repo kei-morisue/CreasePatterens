@@ -359,3 +359,6 @@
 2025-07-14_crab_cp.png
 2025-07-15_neo_cp.png
 2025-07-17_eyes_cp.png
+2025-07-31_chinese_frame_cp.png
+2025-08-02_O_O_cp.png
+2025-08-10_chinese_frame_cp.png
