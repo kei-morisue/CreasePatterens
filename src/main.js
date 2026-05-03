@@ -84,7 +84,7 @@ for (const [i, k] of years.entries()) {
     }
 
 }
-document.getElementById("2025").click()
+document.getElementById("2026").click()
 
 document.getElementById("load").style.display = "none"
 
