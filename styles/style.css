@@ -1,8 +1,19 @@
 img {
-    width: 300px;
-    max-width: 30%;
-    max-height: 30%;
+    width: 50%;
 }
+
+label {
+    font-size: larger;
+}
+
+@media screen and (width >640px) {
+    img {
+        height: calc(100vw / 3);
+        width: auto;
+    }
+}
+
+
 
 .linkbox {
     position: relative;

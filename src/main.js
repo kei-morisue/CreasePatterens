@@ -4,16 +4,16 @@ const path = "";
 
 
 const pics = await async_list(path + "pics_list.txt")
-const pics_list = pics.map((e) => { return path + "pics\\" + e })
+const pics_list = pics.map((e) => { return path + "pics\\" + e }).toReversed();
 const png = await async_list(path + "png_list.txt")
-const png_list = png.map((e) => { return path + "PNG_format\\" + e })
+const png_list = png.map((e) => { return path + "PNG_format\\" + e }).toReversed();
 const cp = await async_list(path + "cp_list.txt")
-const cp_list = cp.map((e) => { return path + "CP_format\\" + e })
+const cp_list = cp.map((e) => { return path + "CP_format\\" + e }).toReversed();
 
 var dates = new Set()
 var years = new Set()
 
-var png_map = async_img_map(png_list)
+var png_map = async_img_map(png_list);
 var cp_map = async_cp_map(cp_list)
 var pics_map = async_img_map(pics_list)
 
@@ -69,8 +69,8 @@ for (const [i, k] of years.entries()) {
     filter_area.appendChild(cb)
 
     const label = document.createElement("label")
-    label.for = cb.id
-    label.innerHTML = k
+    label.setAttribute("for", cb.id);
+    label.innerHTML = k + "    ";
 
     filter_area.appendChild(label)
 
